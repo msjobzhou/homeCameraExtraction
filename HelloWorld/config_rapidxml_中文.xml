@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='gb2312' ?>
+<config>
+	<student name="test_0" adress="河北省小山村0">
+		<color>
+			<red>0.1</red>
+			<green>0.1</green>
+			<blue>0.1</blue>
+			<alpha>1.0</alpha>
+		</color>
+	</student>
+	<student name="test_1" adress="河北省小山村1">
+		<size>
+			<x>640</x>
+			<y>480</y>
+		</size>
+	</student>
+	<student name="test_2" adress="河北省小山村2"/>
+	<student name="test_3" adress="河北省小山村3"/>
+	<student name="test_4" adress="河北省小山村4"/>
+</config>
+

@@ -59,7 +59,9 @@ bool listFiles(string fileName)
 	return true;
 }
 
-
+/*
+函数作用：遍历文件夹，并且将遍历到的文件交给traverseFolder_handler这个回调函数处理
+*/
 void traverseFolder(string folderPath, ofstream &fout, traverseFolder_handler tf_handler=NULL)
 {
 	_finddata_t FileInfo;
@@ -101,6 +103,54 @@ void traverseFolder(string folderPath, ofstream &fout, traverseFolder_handler tf
 	//其他函数递归使用fout，这个文件输出流不能关闭，否则会导致其他递归函数写入不进去
 	//fout.close();
 }
+
+/*
+函数作用：遍历文件夹，将遍历到的文件夹或者文件名写入到XML文件中
+*/
+void traverseFolderAndSave2xml(string folderPath, rapidxml::xml_node<>* node, rapidxml::xml_document<> &doc)
+{
+	_finddata_t FileInfo;
+	//先写死只支持遍历mp4格式的文件
+	string strfind = folderPath + "\\*.*";
+	long Handle = _findfirst(strfind.c_str(), &FileInfo);
+
+	if (Handle == -1L)
+	{
+		cerr << "can not match the folder path" << endl;
+		exit(-1);
+	}
+	do {
+		//判断是否有子目录
+		if (FileInfo.attrib & _A_SUBDIR)
+		{
+			//这个语句很重要
+			if ((strcmp(FileInfo.name, ".") != 0) && (strcmp(FileInfo.name, "..") != 0))
+			{
+				string newPath = folderPath + "\\" + FileInfo.name;
+				rapidxml::xml_node<>* folder = doc.allocate_node(rapidxml::node_element, "folder", NULL);
+				folder->append_attribute(doc.allocate_attribute("Path", doc.allocate_string(FileInfo.name)));
+				node->append_node(folder);
+				traverseFolderAndSave2xml(newPath, folder, doc);
+				cout << "find new path:" << newPath << endl;
+			}
+		}
+		else
+		{
+			string tmpFileName = folderPath + "\\" + FileInfo.name;
+			rapidxml::xml_node<>* fileNode = doc.allocate_node(rapidxml::node_element, "file", doc.allocate_string(FileInfo.name));
+			node->append_node(fileNode);
+			cout << folderPath << "\\" << FileInfo.name << endl;
+		}
+	} while (_findnext(Handle, &FileInfo) == 0);
+
+	strfind.clear();
+	string(strfind).swap(strfind);
+
+	_findclose(Handle);
+	//其他函数递归使用fout，这个文件输出流不能关闭，否则会导致其他递归函数写入不进去
+	//fout.close();
+}
+
 /*
 函数作用：根据文件名的绝对路径得到文件夹路径和文件名
 */

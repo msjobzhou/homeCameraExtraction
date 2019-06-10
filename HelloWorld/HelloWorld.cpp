@@ -8,6 +8,7 @@
 #include <opencv2/opencv.hpp>
 #include "opencv2/highgui/highgui.hpp"  
 #include "opencv/cv.hpp"
+#include <locale>
 
 #include <iostream>
 #include <fstream>
@@ -17,10 +18,28 @@
 #include <assert.h>
 #include<stdio.h>
 #include<stdlib.h>
+#include<tchar.h>
 
 #include <cv.h>
 
+#include "benchmark.h"
+#include "wchar_to_utf8.hpp"
+#include "readUtf8FileWith_codecvt.hpp"
+#include "xmlReadWriteDemo.hpp"
+#include "thread_pool.hpp"
+
 //#include <vld.h>
+
+
+#include "stdlib.h"
+#include <iostream>
+
+//下面三个文件是本段代码需要的库文件
+#include "rapidxml/rapidxml.hpp"       
+#include "rapidxml/rapidxml_utils.hpp"
+#include "rapidxml/rapidxml_print.hpp"
+
+
 
 using namespace std;
 using namespace cv;
@@ -38,7 +57,7 @@ struct experimentalValue {
 	//1、首先定义：“画面变化比较大”的视频是指通过判断 此视频的相似度和fSimilarityThreshold的大小，小于阈值的
 	//2、如果当前单个视频“画面变化比较大”判断需要保存的话，继续往下走
 	//3、首先从B5开始判断如果,B5通过fSimilarityThreshold比较判断“画面变化比较大”需要保存的话，则B5到A的6个视频都标记为需要保存
-	//4、如果B5通过fSimilarityThreshold判断后不需要保存的话，再判断B4，同样满足上述步骤3中条件的话,B4到A5个视频保存，以此类推
+	//4、如果B5通过fSimilarityThreshold判断后不需要保存的话，再判断B4，同样满足上述步骤3中条件的话,B4到A的5个视频保存，以此类推
 	int nConsecutiveVideoNum;
 };
 typedef struct experimentalValue experimentalValue;
@@ -336,9 +355,126 @@ void tf_function2(string &filePath, ofstream &outFile) {
 	vector<IplImage*>(vImg).swap(vImg);
 }
 
+int createXml(char* fileName) {
+	if (NULL == fileName) {
+		return -1;
+	}
+	rapidxml::xml_document<> doc;
+	//xml文件头
+	rapidxml::xml_node<>* fileHeader = doc.allocate_node(rapidxml::node_pi, doc.allocate_string("xml version='1.0' encoding='utf-8'"));
+	doc.append_node(fileHeader);
+	//xml根节点
+	rapidxml::xml_node<>* root = doc.allocate_node(rapidxml::node_element, "scanlist", NULL);
+	doc.append_node(root);
+	std::ofstream out(fileName);
+	out << doc;
+
+	return 0;
+}
+
+int appendXmlInRootNode(char* xmlFileName, char* appendedFolderPath) {
+	if (NULL == xmlFileName) {
+		return -1;
+	}
+	rapidxml::file<> fdoc(xmlFileName);
+	rapidxml::xml_document<> doc;
+	doc.parse<0>(fdoc.data());
+	//rapidxml::xml_node<>* fileHeader = doc.allocate_node(rapidxml::node_pi, doc.allocate_string("xml version='1.0' encoding='utf-8'"));
+	//doc.prepend_node(fileHeader);
+	//! 获取根节点
+	rapidxml::xml_node<>* root = doc.first_node();
+
+	//增加一个folder节点
+	rapidxml::xml_node<>* folder = doc.allocate_node(rapidxml::node_element, "folder", NULL);
+	root->append_node(folder);
+	folder->append_node(doc.allocate_node(rapidxml::node_element, "name", appendedFolderPath));
+	folder->append_node(doc.allocate_node(rapidxml::node_element, "processed", "false"));
+	
+	std::ofstream out(xmlFileName);
+
+	//增加xml文件头
+	rapidxml::xml_document<> doc2;
+	rapidxml::xml_node<>* fileHeader = doc2.allocate_node(rapidxml::node_pi, doc2.allocate_string("xml version='1.0' encoding='utf-8'"));
+	doc2.append_node(fileHeader);
+	out << doc2;
+
+	out << doc;
+
+	return 0;
+}
+
+void testFileSaveUTF8()
+{
+	std::ofstream testFile;
+	testFile.open("demo_utf8.xml", std::ios::out | std::ios::binary);
+	std::wstring text =
+		//L"< ?xml version=\"1.0\" encoding=\"UTF-8\"? >\n"
+		L"< root description=\"this is a naive朴素 example\" >\n< /root >";
+	std::string outtext = wchar_to_utf8(text);
+	testFile << outtext;
+	testFile.close();
+}
 int main(int argc, char* argv[])
 {
-	traverseFolder_handler tf_handler = tf_function2;
+	cout << calculateRunTime(test_read_video);
+	//test_read_video_thread_pool();
+	//test_read_video();
+	//test_thread_pool();
+	//write_xml();
+	//read_xml();
+	//test_read_xml();
+	//testFileSaveUTF8();
+	//readUtf8FileWith_codecvt();
+	//中文测试
+	/*const char* str_zh = "中文";
+	printf(str_zh);
+	printf("\n");
+	cout << str_zh;
+	printf("\n");
+
+	const wchar_t* str_zh_wchar = _T("中文");
+	printf(str_zh);
+	printf("\n");
+	cout << str_zh;
+	printf("\n");
+
+	//std::cout << "User-preferred locale setting is " << std::locale("").name().c_str();
+	string s1 = "第一";
+	wstring s2 = L"第二";
+	cout << s1 << endl;
+	wcout.imbue(locale("chs"));
+	wcout << s2 << endl;*/
+	//ofstream ofs("ofs测试.txt");
+	//ofs << "test测试" << 1234 << endl;
+
+	//locale &loc = locale::global(locale(locale(), "", LC_CTYPE)); 
+	
+	//wofstream wofs(L"wofs测试.txt");
+	//locale::global(loc); 
+	
+	//wofs << L"Another test还是测试" << 1234 << endl;
+
+	/*createXml("config_test.xml");
+	system("PAUSE");
+	appendXmlInRootNode("config_test.xml", "c:\\test\\test1");*/
+
+
+	/*
+	rapidxml::xml_document<> doc;
+	//xml文件头
+	rapidxml::xml_node<>* fileHeader = doc.allocate_node(rapidxml::node_pi, doc.allocate_string("xml version='1.0' encoding='utf-8'"));
+	doc.append_node(fileHeader);
+	//xml根节点
+	rapidxml::xml_node<>* root = doc.allocate_node(rapidxml::node_element, "scanlist", NULL);
+	doc.append_node(root);
+	std::ofstream out("D:\\test\\traverse_中文.xml");
+	//out << doc;
+
+	traverseFolderAndSave2xml("D:\\test\\test1\\2017-04-05中文", root, doc);
+	out << doc;
+	*/
+
+	//traverseFolder_handler tf_handler = tf_function2;
 	//traverseFolder_handler tf_handler = tf_function2;
 	
 	//分别分析三类摄像头拍摄的一天数据样本
@@ -346,12 +482,21 @@ int main(int argc, char* argv[])
 	//string path = "E:\\周晓董视频备份\\餐厅墙上\\2017-11-06";
 	
 
-	ofstream of("E:\\test\\周晓董视频备份.txt"/*, ios::app*/);
-	string path = "E:\\周晓董视频备份";
+	//ofstream of("E:\\test\\周晓董视频备份.txt"/*, ios::app*/);
+	//string path = "E:\\周晓董视频备份";
 
 	//ofstream of("D:\\test\\客厅墙上.txt"/*, ios::app*/);
 	//string path = "D:\\周晓董视频备份2017年10月23日到11月12日\\客厅墙上";
-    
+	//VOID_FUNC pVoidFunc = testCreateFileCapture2Threads;
+	//double dTime=calculateRunTime(pVoidFunc);
+	//cout << "testCreateFileCapture running time is:" << dTime << endl;
+
+	//2018/2/4上午处理
+	//ofstream of("D:\\test\\客厅墙上20180204.txt"/*, ios::app*/);
+	//string path = "F:\\周晓董视频备份\\360摄像头录像备份";
+
+
+	/*
 	traverseFolder(path, of, tf_handler);
 	//批量一次写入剩下的文件
 	if (gVideoSimilarityBuf.nCurPos >= 1) {
@@ -398,9 +543,16 @@ int main(int argc, char* argv[])
 		gVideoSimilarityBuf.nCurPos = 0;
 	}
 	of.close();
+	*/
+	
+
+
+
 
 	//此函数等待按键，按键盘任意键就返回
 	waitKey();
 	
 	return 0;
 }
+
+

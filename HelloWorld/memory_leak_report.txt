@@ -1,0 +1,1399 @@
+Visual Leak Detector Version 2.5.1 installed.
+    Outputting the report to the debugger and to C:\Users\chao\documents\visual studio 2015\Projects\HelloWorld\HelloWorld\memory_leak_report.txt
+WARNING: Visual Leak Detector detected memory leaks!
+---------- Block 965 at 0x004DB3E8: 48 bytes ----------
+  Leak Hash: 0x7DB2EE91, Count: 1, Total 48 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 31 2E    6A 70 67 00     6.mp4_im g_1.jpg.
+
+
+---------- Block 1112 at 0x004DF610: 532 bytes ----------
+  Leak Hash: 0x9A8DA5E1, Count: 1, Total 532 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::allocate()
+    d:\vs2015\vc\include\vector (1602): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reallocate() + 0x13 bytes
+    d:\vs2015\vc\include\vector (1633): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reserve()
+    d:\vs2015\vc\include\vector (1291): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    D0 1B 53 00    E8 B3 4D 00    CD CD CD CD    CD CD CD CD     ..S...M. ........
+    CD CD CD CD    2F 00 00 00    2F 00 00 00    C0 18 53 00     ..../... /.....S.
+    08 E1 52 00    CD CD CD CD    CD CD CD CD    CD CD CD CD     ..R..... ........
+    2F 00 00 00    2F 00 00 00    18 18 53 00    48 E0 52 00     /.../... ..S.H.R.
+    CD CD CD CD    CD CD CD CD    CD CD CD CD    2F 00 00 00     ........ ..../...
+    2F 00 00 00    10 1A 53 00    88 E2 52 00    CD CD CD CD     /.....S. ..R.....
+    CD CD CD CD    CD CD CD CD    2F 00 00 00    2F 00 00 00     ........ /.../...
+    B0 1C 53 00    C8 E1 52 00    CD CD CD CD    CD CD CD CD     ..S...R. ........
+    CD CD CD CD    2F 00 00 00    2F 00 00 00    C8 16 53 00     ..../... /.....S.
+    28 E2 52 00    CD CD CD CD    CD CD CD CD    CD CD CD CD     (.R..... ........
+    2F 00 00 00    2F 00 00 00    70 17 53 00    28 DC 52 00     /.../... p.S.(.R.
+    CD CD CD CD    CD CD CD CD    CD CD CD CD    2F 00 00 00     ........ ..../...
+    2F 00 00 00    F8 18 53 00    68 D8 52 00    CD CD CD CD     /.....S. h.R.....
+    CD CD CD CD    CD CD CD CD    2F 00 00 00    2F 00 00 00     ........ /.../...
+    90 1D 53 00    A8 DA 52 00    CD CD CD CD    CD CD CD CD     ..S...R. ........
+    CD CD CD CD    2F 00 00 00    2F 00 00 00    58 1D 53 00     ..../... /...X.S.
+
+
+---------- Block 1095 at 0x004F58D8: 64 bytes ----------
+  Leak Hash: 0x8D991630, Count: 1, Total 64 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 31 32    2E 6A 70 67     6.mp4_im g_12.jpg
+    00 CD CD CD    CD CD CD CD    CD CD CD CD    CD CD CD CD     ........ ........
+
+
+---------- Block 1104 at 0x004F5948: 64 bytes ----------
+  Leak Hash: 0x8D991630, Count: 1, Total 64 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 31 33    2E 6A 70 67     6.mp4_im g_13.jpg
+    00 CD CD CD    CD CD CD CD    CD CD CD CD    CD CD CD CD     ........ ........
+
+
+---------- Block 1086 at 0x004F5A28: 64 bytes ----------
+  Leak Hash: 0x8D991630, Count: 1, Total 64 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 31 31    2E 6A 70 67     6.mp4_im g_11.jpg
+    00 CD CD CD    CD CD CD CD    CD CD CD CD    CD CD CD CD     ........ ........
+
+
+---------- Block 1077 at 0x004F5BE8: 64 bytes ----------
+  Leak Hash: 0x8D991630, Count: 1, Total 64 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 31 30    2E 6A 70 67     6.mp4_im g_10.jpg
+    00 CD CD CD    CD CD CD CD    CD CD CD CD    CD CD CD CD     ........ ........
+
+
+---------- Block 1127 at 0x004F5CC8: 64 bytes ----------
+  Leak Hash: 0x8D991630, Count: 1, Total 64 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 31 34    2E 6A 70 67     6.mp4_im g_14.jpg
+    00 CD CD CD    CD CD CD CD    CD CD CD CD    CD CD CD CD     ........ ........
+
+
+---------- Block 14 at 0x00504458: 32 bytes ----------
+  Leak Hash: 0x3A5E590D, Count: 1, Total 32 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1797): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::reserve() + 0xE bytes
+    d:\vs2015\vc\include\xstring (2358): HelloWorld.exe!std::operator+<char,std::char_traits<char>,std::allocator<char> >()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (67): HelloWorld.exe!traverseFolder() + 0x15 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    65 73 74 5C    74 65 73 74    31 5C 30 37     D:\test\ test1\07
+    5C 2A 2E 2A    00 CD CD CD    CD CD CD CD    CD CD CD CD     \*.*.... ........
+
+
+---------- Block 944 at 0x005044A8: 32 bytes ----------
+  Leak Hash: 0x030A4310, Count: 1, Total 32 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1797): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::reserve() + 0xE bytes
+    d:\vs2015\vc\include\xstring (2358): HelloWorld.exe!std::operator+<char,std::char_traits<char>,std::allocator<char> >()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (90): HelloWorld.exe!traverseFolder() + 0x1C bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    65 73 74 5C    74 65 73 74    31 5C 30 37     D:\test\ test1\07
+    5C 31 36 2E    6D 70 34 00    CD CD CD CD    CD CD CD CD     \16.mp4. ........
+
+
+---------- Block 948 at 0x005044F8: 32 bytes ----------
+  Leak Hash: 0xC6CEFB25, Count: 1, Total 32 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1096): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::append() + 0x14 bytes
+    d:\vs2015\vc\include\xstring (1108): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::append()
+    d:\vs2015\vc\include\xstring (1056): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator+=()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (111): HelloWorld.exe!tf_function()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 00 CD     test\tes t1\07\..
+
+
+---------- Block 952 at 0x00504548: 32 bytes ----------
+  Leak Hash: 0xF7594D63, Count: 1, Total 32 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1797): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::reserve() + 0xE bytes
+    d:\vs2015\vc\include\xstring (2358): HelloWorld.exe!std::operator+<char,std::char_traits<char>,std::allocator<char> >()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (30): HelloWorld.exe!readVideoSaveImg() + 0x20 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    65 73 74 5C    74 65 73 74    31 5C 30 37     D:\test\ test1\07
+    5C 5C 31 36    2E 6D 70 34    00 CD CD CD    CD CD CD CD     \\16.mp4 ........
+
+
+---------- Block 9 at 0x00504778: 32 bytes ----------
+  Leak Hash: 0xEA7626D5, Count: 1, Total 32 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1096): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::append() + 0x14 bytes
+    d:\vs2015\vc\include\xstring (1108): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::append()
+    d:\vs2015\vc\include\xstring (2440): HelloWorld.exe!std::operator+<char,std::char_traits<char>,std::allocator<char> >() + 0xC bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (82): HelloWorld.exe!traverseFolder() + 0x48 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    65 73 74 5C    74 65 73 74    31 5C 30 37     D:\test\ test1\07
+    00 CD CD CD    CD CD CD CD    CD CD CD CD    CD CD CD CD     ........ ........
+
+
+---------- Block 5 at 0x005048B8: 32 bytes ----------
+  Leak Hash: 0xA37F5FF3, Count: 1, Total 32 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1797): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::reserve() + 0xE bytes
+    d:\vs2015\vc\include\xstring (2358): HelloWorld.exe!std::operator+<char,std::char_traits<char>,std::allocator<char> >()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (67): HelloWorld.exe!traverseFolder() + 0x15 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    65 73 74 5C    74 65 73 74    31 5C 2A 2E     D:\test\ test1\*.
+    2A 00 CD CD    CD CD CD CD    CD CD CD CD    CD CD CD CD     *....... ........
+
+
+---------- Block 12 at 0x00504958: 32 bytes ----------
+  Leak Hash: 0x703EBC9F, Count: 1, Total 32 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x1F bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    65 73 74 5C    74 65 73 74    31 5C 30 37     D:\test\ test1\07
+    00 CD CD CD    CD CD CD CD    CD CD CD CD    CD CD CD CD     ........ ........
+
+
+---------- Block 1125 at 0x00516928: 8 bytes ----------
+  Leak Hash: 0xD1FE846E, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >() + 0x1A bytes
+    d:\vs2015\vc\include\xmemory (278): HelloWorld.exe!std::_Uninitialized_move_al_unchecked1<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocato() + 0x2E bytes
+    d:\vs2015\vc\include\xmemory (303): HelloWorld.exe!std::_Uninitialized_move_al_unchecked<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator() + 0x42 bytes
+    d:\vs2015\vc\include\xmemory (316): HelloWorld.exe!std::_Uninitialized_move<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >() + 0x30 bytes
+    d:\vs2015\vc\include\vector (1659): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Umove<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *>() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1605): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reallocate() + 0x22 bytes
+    d:\vs2015\vc\include\vector (1633): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reserve()
+    d:\vs2015\vc\include\vector (1291): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    60 F7 4D 00    00 00 00 00                                   `.M..... ........
+
+
+---------- Block 2 at 0x00516B90: 8 bytes ----------
+  Leak Hash: 0x3B0590C1, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (615): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > >()
+    d:\vs2015\vc\include\xstring (835): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >() + 0x8 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (210): HelloWorld.exe!main() + 0x10 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    98 F8 1D 00    00 00 00 00                                   ........ ........
+
+
+---------- Block 1124 at 0x00516D18: 8 bytes ----------
+  Leak Hash: 0xD1FE846E, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >() + 0x1A bytes
+    d:\vs2015\vc\include\xmemory (278): HelloWorld.exe!std::_Uninitialized_move_al_unchecked1<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocato() + 0x2E bytes
+    d:\vs2015\vc\include\xmemory (303): HelloWorld.exe!std::_Uninitialized_move_al_unchecked<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator() + 0x42 bytes
+    d:\vs2015\vc\include\xmemory (316): HelloWorld.exe!std::_Uninitialized_move<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >() + 0x30 bytes
+    d:\vs2015\vc\include\vector (1659): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Umove<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *>() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1605): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reallocate() + 0x22 bytes
+    d:\vs2015\vc\include\vector (1633): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reserve()
+    d:\vs2015\vc\include\vector (1291): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 F7 4D 00    00 00 00 00                                   D.M..... ........
+
+
+---------- Block 3 at 0x00516D50: 8 bytes ----------
+  Leak Hash: 0x7BB32320, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (777): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >() + 0x27 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x22 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    84 F7 1D 00    00 00 00 00                                   ........ ........
+
+
+---------- Block 6 at 0x00516DC0: 8 bytes ----------
+  Leak Hash: 0x626E0D2A, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xstring (2360): HelloWorld.exe!std::operator+<char,std::char_traits<char>,std::allocator<char> >() + 0xC bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (67): HelloWorld.exe!traverseFolder() + 0x15 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    1C F6 1D 00    00 00 00 00                                   ........ ........
+
+
+---------- Block 10 at 0x00516E68: 8 bytes ----------
+  Leak Hash: 0x6162260D, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xstring (2440): HelloWorld.exe!std::operator+<char,std::char_traits<char>,std::allocator<char> >() + 0x1E bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (82): HelloWorld.exe!traverseFolder() + 0x48 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    EC F5 1D 00    00 00 00 00                                   ........ ........
+
+
+---------- Block 11 at 0x00516ED8: 8 bytes ----------
+  Leak Hash: 0x33FBA4B7, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (777): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >() + 0x27 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x1F bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    90 F3 1D 00    00 00 00 00                                   ........ ........
+
+
+---------- Block 15 at 0x00516F10: 8 bytes ----------
+  Leak Hash: 0x77F945E5, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xstring (2360): HelloWorld.exe!std::operator+<char,std::char_traits<char>,std::allocator<char> >() + 0xC bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (67): HelloWorld.exe!traverseFolder() + 0x15 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    28 F2 1D 00    00 00 00 00                                   (....... ........
+
+
+---------- Block 1126 at 0x00516F48: 8 bytes ----------
+  Leak Hash: 0x9161F040, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (777): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >() + 0x27 bytes
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    7C F7 4D 00    00 00 00 00                                   |.M..... ........
+
+
+---------- Block 1049 at 0x0052D868: 48 bytes ----------
+  Leak Hash: 0x7DB2EE91, Count: 1, Total 48 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 38 2E    6A 70 67 00     6.mp4_im g_8.jpg.
+
+
+---------- Block 1058 at 0x0052DAA8: 48 bytes ----------
+  Leak Hash: 0x7DB2EE91, Count: 1, Total 48 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 39 2E    6A 70 67 00     6.mp4_im g_9.jpg.
+
+
+---------- Block 1040 at 0x0052DC28: 48 bytes ----------
+  Leak Hash: 0x7DB2EE91, Count: 1, Total 48 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 37 2E    6A 70 67 00     6.mp4_im g_7.jpg.
+
+
+---------- Block 988 at 0x0052E048: 48 bytes ----------
+  Leak Hash: 0x7DB2EE91, Count: 1, Total 48 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 33 2E    6A 70 67 00     6.mp4_im g_3.jpg.
+
+
+---------- Block 976 at 0x0052E108: 48 bytes ----------
+  Leak Hash: 0x7DB2EE91, Count: 1, Total 48 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 32 2E    6A 70 67 00     6.mp4_im g_2.jpg.
+
+
+---------- Block 1015 at 0x0052E1C8: 48 bytes ----------
+  Leak Hash: 0x7DB2EE91, Count: 1, Total 48 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 35 2E    6A 70 67 00     6.mp4_im g_5.jpg.
+
+
+---------- Block 1024 at 0x0052E228: 48 bytes ----------
+  Leak Hash: 0x7DB2EE91, Count: 1, Total 48 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 36 2E    6A 70 67 00     6.mp4_im g_6.jpg.
+
+
+---------- Block 1001 at 0x0052E288: 48 bytes ----------
+  Leak Hash: 0x7DB2EE91, Count: 1, Total 48 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 34 2E    6A 70 67 00     6.mp4_im g_4.jpg.
+
+
+---------- Block 1118 at 0x005316C8: 8 bytes ----------
+  Leak Hash: 0xD1FE846E, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >() + 0x1A bytes
+    d:\vs2015\vc\include\xmemory (278): HelloWorld.exe!std::_Uninitialized_move_al_unchecked1<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocato() + 0x2E bytes
+    d:\vs2015\vc\include\xmemory (303): HelloWorld.exe!std::_Uninitialized_move_al_unchecked<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator() + 0x42 bytes
+    d:\vs2015\vc\include\xmemory (316): HelloWorld.exe!std::_Uninitialized_move<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >() + 0x30 bytes
+    d:\vs2015\vc\include\vector (1659): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Umove<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *>() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1605): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reallocate() + 0x22 bytes
+    d:\vs2015\vc\include\vector (1633): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reserve()
+    d:\vs2015\vc\include\vector (1291): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    9C F6 4D 00    00 00 00 00                                   ..M..... ........
+
+
+---------- Block 949 at 0x00531700: 8 bytes ----------
+  Leak Hash: 0x3F049C43, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\vector (580): HelloWorld.exe!std::_Vector_alloc<std::_Vec_base_types<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\vector (546): HelloWorld.exe!std::_Vector_alloc<std::_Vec_base_types<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > > >::_Vector_alloc<std::_Vec_base_types<std::basic_string<ch()
+    d:\vs2015\vc\include\vector (708): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allo()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (117): HelloWorld.exe!tf_function() + 0x18 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    38 EC 1D 00    00 00 00 00                                   8....... ........
+
+
+---------- Block 1119 at 0x00531770: 8 bytes ----------
+  Leak Hash: 0xD1FE846E, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >() + 0x1A bytes
+    d:\vs2015\vc\include\xmemory (278): HelloWorld.exe!std::_Uninitialized_move_al_unchecked1<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocato() + 0x2E bytes
+    d:\vs2015\vc\include\xmemory (303): HelloWorld.exe!std::_Uninitialized_move_al_unchecked<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator() + 0x42 bytes
+    d:\vs2015\vc\include\xmemory (316): HelloWorld.exe!std::_Uninitialized_move<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >() + 0x30 bytes
+    d:\vs2015\vc\include\vector (1659): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Umove<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *>() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1605): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reallocate() + 0x22 bytes
+    d:\vs2015\vc\include\vector (1633): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reserve()
+    d:\vs2015\vc\include\vector (1291): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    B8 F6 4D 00    00 00 00 00                                   ..M..... ........
+
+
+---------- Block 947 at 0x005317E0: 8 bytes ----------
+  Leak Hash: 0x9FFBE619, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (615): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > >()
+    d:\vs2015\vc\include\xstring (835): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >() + 0x8 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (102): HelloWorld.exe!tf_function() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    64 ED 1D 00    00 00 00 00                                   d....... ........
+
+
+---------- Block 1115 at 0x00531818: 8 bytes ----------
+  Leak Hash: 0xD1FE846E, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >() + 0x1A bytes
+    d:\vs2015\vc\include\xmemory (278): HelloWorld.exe!std::_Uninitialized_move_al_unchecked1<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocato() + 0x2E bytes
+    d:\vs2015\vc\include\xmemory (303): HelloWorld.exe!std::_Uninitialized_move_al_unchecked<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator() + 0x42 bytes
+    d:\vs2015\vc\include\xmemory (316): HelloWorld.exe!std::_Uninitialized_move<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >() + 0x30 bytes
+    d:\vs2015\vc\include\vector (1659): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Umove<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *>() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1605): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reallocate() + 0x22 bytes
+    d:\vs2015\vc\include\vector (1633): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reserve()
+    d:\vs2015\vc\include\vector (1291): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    48 F6 4D 00    00 00 00 00                                   H.M..... ........
+
+
+---------- Block 1114 at 0x005318C0: 8 bytes ----------
+  Leak Hash: 0xD1FE846E, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >() + 0x1A bytes
+    d:\vs2015\vc\include\xmemory (278): HelloWorld.exe!std::_Uninitialized_move_al_unchecked1<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocato() + 0x2E bytes
+    d:\vs2015\vc\include\xmemory (303): HelloWorld.exe!std::_Uninitialized_move_al_unchecked<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator() + 0x42 bytes
+    d:\vs2015\vc\include\xmemory (316): HelloWorld.exe!std::_Uninitialized_move<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >() + 0x30 bytes
+    d:\vs2015\vc\include\vector (1659): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Umove<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *>() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1605): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reallocate() + 0x22 bytes
+    d:\vs2015\vc\include\vector (1633): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reserve()
+    d:\vs2015\vc\include\vector (1291): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    2C F6 4D 00    00 00 00 00                                   ,.M..... ........
+
+
+---------- Block 1120 at 0x005318F8: 8 bytes ----------
+  Leak Hash: 0xD1FE846E, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >() + 0x1A bytes
+    d:\vs2015\vc\include\xmemory (278): HelloWorld.exe!std::_Uninitialized_move_al_unchecked1<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocato() + 0x2E bytes
+    d:\vs2015\vc\include\xmemory (303): HelloWorld.exe!std::_Uninitialized_move_al_unchecked<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator() + 0x42 bytes
+    d:\vs2015\vc\include\xmemory (316): HelloWorld.exe!std::_Uninitialized_move<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >() + 0x30 bytes
+    d:\vs2015\vc\include\vector (1659): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Umove<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *>() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1605): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reallocate() + 0x22 bytes
+    d:\vs2015\vc\include\vector (1633): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reserve()
+    d:\vs2015\vc\include\vector (1291): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    D4 F6 4D 00    00 00 00 00                                   ..M..... ........
+
+
+---------- Block 1135 at 0x00531930: 8 bytes ----------
+  Leak Hash: 0x9161F040, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (777): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >() + 0x27 bytes
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    98 F7 4D 00    00 00 00 00                                   ..M..... ........
+
+
+---------- Block 1116 at 0x00531A10: 8 bytes ----------
+  Leak Hash: 0xD1FE846E, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >() + 0x1A bytes
+    d:\vs2015\vc\include\xmemory (278): HelloWorld.exe!std::_Uninitialized_move_al_unchecked1<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocato() + 0x2E bytes
+    d:\vs2015\vc\include\xmemory (303): HelloWorld.exe!std::_Uninitialized_move_al_unchecked<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator() + 0x42 bytes
+    d:\vs2015\vc\include\xmemory (316): HelloWorld.exe!std::_Uninitialized_move<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >() + 0x30 bytes
+    d:\vs2015\vc\include\vector (1659): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Umove<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *>() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1605): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reallocate() + 0x22 bytes
+    d:\vs2015\vc\include\vector (1633): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reserve()
+    d:\vs2015\vc\include\vector (1291): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    64 F6 4D 00    00 00 00 00                                   d.M..... ........
+
+
+---------- Block 1113 at 0x00531BD0: 8 bytes ----------
+  Leak Hash: 0xD1FE846E, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >() + 0x1A bytes
+    d:\vs2015\vc\include\xmemory (278): HelloWorld.exe!std::_Uninitialized_move_al_unchecked1<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocato() + 0x2E bytes
+    d:\vs2015\vc\include\xmemory (303): HelloWorld.exe!std::_Uninitialized_move_al_unchecked<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator() + 0x42 bytes
+    d:\vs2015\vc\include\xmemory (316): HelloWorld.exe!std::_Uninitialized_move<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >() + 0x30 bytes
+    d:\vs2015\vc\include\vector (1659): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Umove<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *>() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1605): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reallocate() + 0x22 bytes
+    d:\vs2015\vc\include\vector (1633): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reserve()
+    d:\vs2015\vc\include\vector (1291): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    10 F6 4D 00    00 00 00 00                                   ..M..... ........
+
+
+---------- Block 1137 at 0x00531C08: 8 bytes ----------
+  Leak Hash: 0x42EB030C, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (777): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >() + 0x27 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (73): HelloWorld.exe!readVideoSaveImg() + 0x19 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    1C E8 1D 00    00 00 00 00                                   ........ ........
+
+
+---------- Block 950 at 0x00531C40: 8 bytes ----------
+  Leak Hash: 0x49774DF3, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (615): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > >()
+    d:\vs2015\vc\include\xstring (835): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >() + 0x8 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (29): HelloWorld.exe!readVideoSaveImg() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    64 E8 1D 00    00 00 00 00                                   d....... ........
+
+
+---------- Block 1117 at 0x00531CB0: 8 bytes ----------
+  Leak Hash: 0xD1FE846E, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >() + 0x1A bytes
+    d:\vs2015\vc\include\xmemory (278): HelloWorld.exe!std::_Uninitialized_move_al_unchecked1<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocato() + 0x2E bytes
+    d:\vs2015\vc\include\xmemory (303): HelloWorld.exe!std::_Uninitialized_move_al_unchecked<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator() + 0x42 bytes
+    d:\vs2015\vc\include\xmemory (316): HelloWorld.exe!std::_Uninitialized_move<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >() + 0x30 bytes
+    d:\vs2015\vc\include\vector (1659): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Umove<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *>() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1605): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reallocate() + 0x22 bytes
+    d:\vs2015\vc\include\vector (1633): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reserve()
+    d:\vs2015\vc\include\vector (1291): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    80 F6 4D 00    00 00 00 00                                   ..M..... ........
+
+
+---------- Block 946 at 0x00531CE8: 8 bytes ----------
+  Leak Hash: 0x69AD0B8B, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xstring (2440): HelloWorld.exe!std::operator+<char,std::char_traits<char>,std::allocator<char> >() + 0x1E bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (90): HelloWorld.exe!traverseFolder() + 0x48 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    D4 F1 1D 00    00 00 00 00                                   ........ ........
+
+
+---------- Block 1123 at 0x00531D20: 8 bytes ----------
+  Leak Hash: 0xD1FE846E, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >() + 0x1A bytes
+    d:\vs2015\vc\include\xmemory (278): HelloWorld.exe!std::_Uninitialized_move_al_unchecked1<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocato() + 0x2E bytes
+    d:\vs2015\vc\include\xmemory (303): HelloWorld.exe!std::_Uninitialized_move_al_unchecked<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator() + 0x42 bytes
+    d:\vs2015\vc\include\xmemory (316): HelloWorld.exe!std::_Uninitialized_move<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >() + 0x30 bytes
+    d:\vs2015\vc\include\vector (1659): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Umove<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *>() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1605): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reallocate() + 0x22 bytes
+    d:\vs2015\vc\include\vector (1633): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reserve()
+    d:\vs2015\vc\include\vector (1291): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    28 F7 4D 00    00 00 00 00                                   (.M..... ........
+
+
+---------- Block 1122 at 0x00531D58: 8 bytes ----------
+  Leak Hash: 0xD1FE846E, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >() + 0x1A bytes
+    d:\vs2015\vc\include\xmemory (278): HelloWorld.exe!std::_Uninitialized_move_al_unchecked1<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocato() + 0x2E bytes
+    d:\vs2015\vc\include\xmemory (303): HelloWorld.exe!std::_Uninitialized_move_al_unchecked<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator() + 0x42 bytes
+    d:\vs2015\vc\include\xmemory (316): HelloWorld.exe!std::_Uninitialized_move<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >() + 0x30 bytes
+    d:\vs2015\vc\include\vector (1659): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Umove<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *>() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1605): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reallocate() + 0x22 bytes
+    d:\vs2015\vc\include\vector (1633): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reserve()
+    d:\vs2015\vc\include\vector (1291): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    0C F7 4D 00    00 00 00 00                                   ..M..... ........
+
+
+---------- Block 1121 at 0x00531D90: 8 bytes ----------
+  Leak Hash: 0xD1FE846E, Count: 1, Total 8 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::_Container_proxy> >::allocate()
+    d:\vs2015\vc\include\xstring (649): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_Alloc_proxy() + 0xA bytes
+    d:\vs2015\vc\include\xstring (624): HelloWorld.exe!std::_String_alloc<std::_String_base_types<char,std::allocator<char> > >::_String_alloc<std::_String_base_types<char,std::allocator<char> > ><std::_Wrap_alloc<std::allocator<char> >,void>()
+    d:\vs2015\vc\include\xstring (912): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > >() + 0x1A bytes
+    d:\vs2015\vc\include\xmemory (278): HelloWorld.exe!std::_Uninitialized_move_al_unchecked1<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocato() + 0x2E bytes
+    d:\vs2015\vc\include\xmemory (303): HelloWorld.exe!std::_Uninitialized_move_al_unchecked<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator() + 0x42 bytes
+    d:\vs2015\vc\include\xmemory (316): HelloWorld.exe!std::_Uninitialized_move<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::basic_string<char,std::char_traits<char>,std::allocator<char> > *,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >() + 0x30 bytes
+    d:\vs2015\vc\include\vector (1659): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Umove<std::basic_string<char,std::char_traits<char>,std::allocator<char> > *>() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1605): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reallocate() + 0x22 bytes
+    d:\vs2015\vc\include\vector (1633): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Reserve()
+    d:\vs2015\vc\include\vector (1291): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    F0 F6 4D 00    00 00 00 00                                   ..M..... ........
+
+
+---------- Block 1142 at 0x005385E0: 64 bytes ----------
+  Leak Hash: 0xB01E6EE2, Count: 1, Total 64 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1096): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::append() + 0x14 bytes
+    d:\vs2015\vc\include\xstring (1108): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::append()
+    d:\vs2015\vc\include\xstring (2440): HelloWorld.exe!std::operator+<char,std::char_traits<char>,std::allocator<char> >() + 0xC bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (60): HelloWorld.exe!readVideoSaveImg() + 0x7B bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 31 36    2E 6A 70 67     6.mp4_im g_16.jpg
+    00 CD CD CD    CD CD CD CD    CD CD CD CD    CD CD CD CD     ........ ........
+
+
+---------- Block 1136 at 0x00538E30: 64 bytes ----------
+  Leak Hash: 0x8D991630, Count: 1, Total 64 bytes
+  Call Stack (TID 13564):
+    ucrtbased.dll!malloc()
+    d:\vs2015\vc\include\xmemory0 (977): HelloWorld.exe!std::_Wrap_alloc<std::allocator<char> >::allocate()
+    d:\vs2015\vc\include\xstring (2196): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Copy() + 0x16 bytes
+    d:\vs2015\vc\include\xstring (2228): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::_Grow() + 0x17 bytes
+    d:\vs2015\vc\include\xstring (1155): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign() + 0xE bytes
+    d:\vs2015\vc\include\xstring (783): HelloWorld.exe!std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >()
+    d:\vs2015\vc\include\xmemory0 (995): HelloWorld.exe!std::_Wrap_alloc<std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::construct<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::basic_string<char,std::char_traits<char>,std::allocator<char> > c() + 0x1A bytes
+    d:\vs2015\vc\include\vector (1294): HelloWorld.exe!std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::push_back()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\video.cpp (72): HelloWorld.exe!readVideoSaveImg()
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (119): HelloWorld.exe!tf_function() + 0x28 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (91): HelloWorld.exe!traverseFolder() + 0x10 bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\traversefolder.cpp (83): HelloWorld.exe!traverseFolder() + 0x2A bytes
+    c:\users\chao\documents\visual studio 2015\projects\helloworld\helloworld\helloworld.cpp (212): HelloWorld.exe!main() + 0x2D bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (64): HelloWorld.exe!invoke_main() + 0x1B bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (253): HelloWorld.exe!__scrt_common_main_seh() + 0x5 bytes
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl (296): HelloWorld.exe!__scrt_common_main()
+    f:\dd\vctools\crt\vcstartup\src\startup\exe_main.cpp (17): HelloWorld.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x439 bytes
+    ntdll.dll!RtlSubscribeWnfStateChangeNotification() + 0x404 bytes
+  Data:
+    44 3A 5C 74    6D 70 5F 63    6F 6D 70 5F    69 6D 67 5C     D:\tmp_c omp_img\
+    74 65 73 74    5C 74 65 73    74 31 5C 30    37 5C 5C 31     test\tes t1\07\\1
+    36 2E 6D 70    34 5F 69 6D    67 5F 31 35    2E 6A 70 67     6.mp4_im g_15.jpg
+    00 CD CD CD    CD CD CD CD    CD CD CD CD    CD CD CD CD     ........ ........
+
+
+Visual Leak Detector detected 50 memory leaks (3688 bytes).
+Largest number used: 4372 bytes.
+Total allocations: 67632 bytes.
+Visual Leak Detector is now exiting.
